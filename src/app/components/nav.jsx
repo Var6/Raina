@@ -6,7 +6,7 @@ function Nav() {
   return (
     <nav className="bg-violet-400 text-black py-2 shadow-lg md:py-1 sm:py-0">
     <div className="container mx-auto px-4 py-2 flex items-center">
-    <Avatar.Root className="inline-flex size-[45px] select-none items-center justify-center overflow-hidden rounded-full bg-blackA1 align-middle">
+    <Avatar.Root className="inline-flex size-[45px] select-none items-center justify-center overflow-hidden rounded-full bg-blackA1 align-middle sm:w-fit">
 			<Avatar.Image
 				className="size-full rounded-[inherit] object-cover"
 				src="https://scontent.cdninstagram.com/v/t51.2885-19/460538753_891143436217774_5535561969616032351_n.jpg?stp=dst-jpg_s160x160_tt6&_nc_cat=108&ccb=1-7&_nc_sid=bf7eb4&_nc_ohc=6KcFrXbLxVgQ7kNvgFdo_b_&_nc_zt=24&_nc_ht=scontent.cdninstagram.com&oh=00_AYDuKW5HgJi4Xrm7uUDu7RUkHQdZDaE50BN1BJY9CGx7eQ&oe=675B407D"
@@ -38,7 +38,7 @@ function Nav() {
           </Link>
         </li>
         <li>
-          <Link href="/about">
+          <Link href="/AboutMe">
             About Me
           </Link>
         </li>
