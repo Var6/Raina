@@ -15,7 +15,7 @@ function page() {
             <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 sm:w-fit lg:mt-0">
                 <h1 className="text-white mb-4 text-5xl sm:text-5xl lg:text-5xl lg:leading-normal font-extrabold title-font flex ml-3 pl-3 py-2 ">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
-                Hello,I`m
+                Hello,I&apos;m
                 <br />
                 Raina
                 </span>

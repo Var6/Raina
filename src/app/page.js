@@ -1,6 +1,8 @@
 // "use client"
 // import Instacard from "./components/instacard";
 // import { useEffect, useState } from "react";
+import Image from "next/image"
+import React from "react";
 
 export default function Home() {
   // const [photos, setPhotos] = useState([]);
@@ -15,10 +17,30 @@ export default function Home() {
   //   fetchPhotos();
   // }, []);
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      {/* {photos.map(photo => (
-        <Instacard links={photo.media_url} likes={"goodle"} key={photo.id}/>
-      ))} */}
-    </div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="grid gap-4">
+                <div>
+                    <Image width={200} height={100} className="h-auto max-w-full rounded-lg" src="/Photos/2.jpeg" alt=""/>
+                </div>
+                 <div>
+                    <Image width={100} height={100} className="h-auto max-w-full rounded-lg" src="/Photos/1.jpg" alt=""/>
+                </div>
+                <div>
+                    <Image width={100} height={100} className="h-auto max-w-full rounded-lg" src="/Photos/2.jpeg" alt=""/>
+                </div>
+            </div>
+            <div className="grid gap-4">
+                <div>
+                    <Image width={100} height={100} className="h-auto max-w-full rounded-lg" src="/Photos/1.jpg" alt=""/>
+                </div>
+                <div>
+                    <Image width={100} height={100} className="h-auto max-w-full rounded-lg" src="/Photos/2.jpeg" alt=""/>
+                </div>
+                <div>
+                    <Image width={100} height={100} className="h-auto max-w-full rounded-lg" src="/Photos/1.jpg" alt=""/>
+                </div>
+            </div>
+        </div>
+
   );
 }
