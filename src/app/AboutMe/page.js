@@ -3,8 +3,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import Review from '../components/review'
-import { TypeAnimation } from 'react-type-animation'
-import { motion } from "motion/react";
+
+
 
 function page() {
   return (
@@ -13,39 +13,17 @@ function page() {
             <div className="lg:w-4/5 mx-auto flex flex-wrap sm:text-center sm:items-center sm:justify-center">
             <Image alt="My Image" width={1000} height={1000} className="lg:w-1/2 lg:h-fit sm:w-full sm:items-center w-fit h-64 object-cover object-center rounded sm:mx-auto md:items-center" src="/Photos/1.jpg" priority/>
             <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 sm:w-fit lg:mt-0">
-            <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
-        >
                 <h1 className="text-white mb-4 text-5xl sm:text-5xl lg:text-5xl lg:leading-normal font-extrabold title-font flex ml-3 pl-3 py-2 ">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
-                Hello,I`&apos`m
+                Hello,I`m
+                <br />
+                Raina
                 </span>
-                <TypeAnimation
-                sequence={[
-                "_Raina",
-                500,
-                "_Dancer",
-                500,
-                "_Teacher",
-                500,
-                "_Model",
-                500,
-                "_Student",
-                500,
-                ]}
-                wrapper="div"
-                speed={50}
-                 repeat={Infinity}
-                />
                 </h1>
                 <p className="leading-relaxed">Am persuing my graduation from U.P collge Varanasi,
                 I have experence in teaching English for ILETS students and am an influcencer on Intagram,
                 I like to explore new cities and make friends, great beliver in Honesty is the best policy and always like to be on time
                 </p>
-                </motion.div>
                 <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5"></div>
                 <Review rate={4} feild={'Dance'}/>
                 <Review rate={3} feild={'Photography'}/>
