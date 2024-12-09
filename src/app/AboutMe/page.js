@@ -1,38 +1,56 @@
+'use client'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import Review from '../components/review'
+import { TypeAnimation } from 'react-type-animation'
+import { motion } from "motion/react";
 
 function page() {
   return (
             <section className="text-gray-600 body-font overflow-hidden">
         <div className="container px-5 py-24 mx-auto">
             <div className="lg:w-4/5 mx-auto flex flex-wrap sm:text-center sm:items-center sm:justify-center">
-            <Image alt="My Image" width={20} height={20} className="lg:w-1/2 w-fit lg:h-auto h-64 object-cover object-center rounded sm:mx-auto md:items-center" src="/Photos/1.jpeg"/>
-            <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                <h1 className="text-3xl title-font font-medium mb-1">Raina Sinha</h1>
-                <div className="flex mb-4">
-                
-                <span className="flex ml-3 pl-3 py-2 border-l-2 border-gray-200 space-x-2s">
-                    <Link className="text-gray-500" href={"./"}>
-                    <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
-                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
-                    </svg>
-                    </Link>
-                    <Link className="text-gray-500" href={"./"} >
-                    <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
-                        <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
-                    </svg>
-                    </Link>
-                    <Link className="text-gray-500" href={"./"}>
-                    <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
-                        <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
-                    </svg>
-                    </Link>
+            <Image alt="My Image" width={1000} height={1000} className="lg:w-1/2 lg:h-fit sm:w-full sm:items-center w-fit h-64 object-cover object-center rounded sm:mx-auto md:items-center" src="/Photos/1.jpg" priority/>
+            <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 sm:w-fit lg:mt-0">
+            <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5 }}
+          className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
+        >
+                <h1 className="text-white mb-4 text-5xl sm:text-5xl lg:text-5xl lg:leading-normal font-extrabold title-font flex ml-3 pl-3 py-2 ">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
+                Hello,I`&apos`m
                 </span>
-                </div>
-                <p className="leading-relaxed">Fam locavore kickstarter distillery. Mixtape chillwave tumeric sriracha taximy chia microdosing tilde DIY. XOXO fam indxgo juiceramps cornhole raw denim forage brooklyn. Everyday carry +1 seitan poutine tumeric. Gastropub blue bottle austin listicle pour-over, neutra jean shorts keytar banjo tattooed umami cardigan.</p>
+                <TypeAnimation
+                sequence={[
+                "_Raina",
+                500,
+                "_Dancer",
+                500,
+                "_Teacher",
+                500,
+                "_Model",
+                500,
+                "_Student",
+                500,
+                ]}
+                wrapper="div"
+                speed={50}
+                 repeat={Infinity}
+                />
+                </h1>
+                <p className="leading-relaxed">Am persuing my graduation from U.P collge Varanasi,
+                I have experence in teaching English for ILETS students and am an influcencer on Intagram,
+                I like to explore new cities and make friends, great beliver in Honesty is the best policy and always like to be on time
+                </p>
+                </motion.div>
                 <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5"></div>
-               
+                <Review rate={4} feild={'Dance'}/>
+                <Review rate={3} feild={'Photography'}/>
+                <Review rate={4} feild={'Fitness'}/>
+                <Review rate={2} feild={'Modeling'}/>
                 <div className="flex">
                 <button className="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Contact</button>
                 </div>
