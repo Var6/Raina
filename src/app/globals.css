@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.image-showcase Image {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .image-showcase Image:hover {
+    transform: scale(1.1);
+  }
+  .animate-infinite-loop {
+    animation: infinite-loop 30s linear infinite;
+  }
+  
+  @keyframes infinite-loop {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
