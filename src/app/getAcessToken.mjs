@@ -1,24 +1,26 @@
-// Import Axios
+// pages/api/instagram.js
 import axios from 'axios';
-
-// Define your Instagram app credentials
-const appId = process.env.INSTAGRAM_APP_ID;
-const appSecret = process.env.INSTAGRAM_APP_SECRET;
+const appId = 1321020419060776;
+const appSecret = `45a99b671eaef563f8b161f317cb1066`;
 const redirectUri = 'http://localhost:3000';
 
-// Define the authorization URL
-const authorizationUrl = `https://api.instagram.com/oauth/authorize?client_id=${appId}&redirect_uri=${redirectUri}&scope=user_profile,user_media&response_type=code`;
+console.log('Starting script...');
+const authorizationUrl = `https://graph.facebook.com/oauth/access_token
+  ?client_id=${appId}
+  &client_secret=${appSecret}
+  &grant_type=client_credentials`;
 
-// Make a GET request to the authorization URL
+console.log('Authorization URL:', authorizationUrl);
+
 axios.get(authorizationUrl)
   .then(response => {
-    // Get the authorization code from the response URL
+    console.log('Authorization response:', response);
+
     const authorizationCode = response.request.res.responseUrl.split('=')[1];
 
-    // Define the access token URL
-    const accessTokenUrl = `https://api.instagram.com/oauth/access_token`;
+    console.log('Authorization code:', authorizationCode);
 
-    // Define the access token request data
+    const accessTokenUrl = 'https://api.instagram.com/oauth/access_token';
     const accessTokenData = {
       client_id: appId,
       client_secret: appSecret,
@@ -27,21 +29,20 @@ axios.get(authorizationUrl)
       redirect_uri: redirectUri
     };
 
-    // Make a POST request to the access token URL
+    console.log('Access token data:', accessTokenData);
+
     axios.post(accessTokenUrl, accessTokenData)
       .then(response => {
-        // Get the access token from the response data
+        console.log('Access token response:', response);
+
         const accessToken = response.data.access_token;
 
-        // Log the access token to the console
-        console.log('Access Token:', accessToken);
+        console.log('Access token:', accessToken);
       })
       .catch(error => {
-        // Log any errors to the console
         console.error('Error obtaining access token:', error);
       });
   })
   .catch(error => {
-    // Log any errors to the console
     console.error('Error obtaining authorization code:', error);
   });
