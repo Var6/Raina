@@ -1,22 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-.image-showcase Image {
-    transition: transform 0.3s ease-in-out;
+  .bg-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
   }
   
-  .image-showcase Image:hover {
-    transform: scale(1.1);
-  }
-  .animate-infinite-loop {
-    animation: infinite-loop 30s linear infinite;
-  }
-  
-  @keyframes infinite-loop {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
+  .bg-grid img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }

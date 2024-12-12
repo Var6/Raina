@@ -4,28 +4,8 @@ import React from 'react'
 function page() {
   return (
         <div className="bg-gray-100 min-h-screen flex flex-col items-center justify-center">
-      <h1 className="text-3xl font-bold mb-8 text-center text-gray-800">Contact Us</h1>
-      <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 w-full max-w-md">
-        <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
-            Name
-          </label>
-          <input
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
-            id="name"
-            type="text"
-            placeholder="Enter your name"
-          />
-        </div>
-        {/* ... other form fields ... */}
-        <div className="m-y-6 ">
-          <button
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full"
-            type="submit"
-          >
-            Submit
-          </button>
-        </div>   
+      <h1 className="text-3xl font-bold mb-8 text-center text-gray-800">Contact Me</h1>
+      <div className="bg-white shadow-md h-fit rounded px-8 pt-6 pb-8 mb-4 w-full max-w-md"> 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-5">
         <Link href={"https://www.facebook.com/share/1EeRaqht7c/?mibextid=LQQJ4d"} className="ml-3 text-gray-500 inline-flex lg:w-1/3">
           <svg fill="blue" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
@@ -48,12 +28,12 @@ function page() {
           <span className='text-yellow-400 border-l-4 border-yellow-400 mx-3 hover:text-gray-500'><span className=' mx-1'> Snapchat</span></span>
         </Link>
       </div>
-      </form>
+      </div>
       
       <p className="text-gray-700 text-sm text-center">
         Feel free to reach out to us with any questions or inquiries.
       </p>
-      <p className="text-gray-700 text-sm text-center">Email: RainaSinha1609@gmail.com</p>
+      <a href="mailto:RainaSinha1609@gmail.com" className="text-gray-700 text-sm text-center hover:text-xl" legacyBehavior>Email: RainaSinha1609@gmail.com</a>
       
     </div>
   )
