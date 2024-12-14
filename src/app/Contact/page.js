@@ -14,7 +14,7 @@ function page() {
           <span className='text-blue-600 border-l-4 border-blue-400 mx-3 hover:text-gray-500'>
              <span className=' mx-1'>Facebook</span></span>
         </Link>
-        <Link href={"https://www.instagram.com/rainaxsinhaa/profilecard/?igsh=bmh2cTE0a2ZqaHM0"} className="ml-3 inline-flex text-gray-500 lg:w-1/3">
+        <Link href={"https://www.instagram.com/rainaxsinhaa"} className="ml-3 inline-flex text-gray-500 lg:w-1/3">
           <svg fill="pink" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
             <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
             <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
@@ -33,7 +33,7 @@ function page() {
       <p className="text-gray-700 text-sm text-center">
         Feel free to reach out to us with any questions or inquiries.
       </p>
-      <a href="mailto:RainaSinha1609@gmail.com" className="text-gray-700 text-sm text-center hover:text-xl" legacyBehavior>Email: RainaSinha1609@gmail.com</a>
+      <a href="mailto:RainaSinha1609@gmail.com" className="text-gray-700 text-sm text-center hover:text-xl" legacybehavior='true'>Email: RainaSinha1609@gmail.com</a>
       
     </div>
   )

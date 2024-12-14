@@ -1,47 +1,17 @@
 import React from 'react'
-import ImageShowcase from '../components/ImageShowcase';
+import Photoview from '../components/photoview';
 
 const page = () => {
-  const images = [
-    {
-      src: '/Photos/1.jpg',
-      alt: 'Image 1',
-      title: 'Image 1 Title',
-      description: 'Image 1 description',
-    },
-    {
-      src: '/Photos/1.jpg',
-      alt: 'Image 2',
-      title: 'Image 2 Title',
-      description: 'Image 2 description',
-    },
-    {
-      src: '/Photos/1.jpg',
-      alt: 'Image 3',
-      title: 'Image 3 Title',
-      description: 'Image 3 description',
-    },
-    {
-      src: '/Photos/2.jpeg',
-      alt: 'Image 1',
-      title: 'Image 1 Title',
-      description: 'Image 1 description',
-    },
-    {
-      src: '/Photos/2.jpeg',
-      alt: 'Image 2',
-      title: 'Image 2 Title',
-      description: 'Image 2 description',
-    },
-    {
-      src: '/Photos/2.jpeg',
-      alt: 'Image 3',
-      title: 'Image 3 Title',
-      description: 'Image 3 description',
-    },
+  const photos = [
+    { url: 'https://www.instagram.com/p/DB9BkuLvThI/?img_index=1' },
+    { url: 'https://www.instagram.com/p/DB9BkuLvThI/?img_index=2' },
+    { url: 'https://www.instagram.com/p/DB9BkuLvThI/?img_index=3' },
   ];
+  
   return (
-    <ImageShowcase images={images} />
+    <div>
+      <Photoview photos={photos}/>
+    </div>
   )
 }
 

@@ -16,6 +16,9 @@ module.exports = {
 				...violet,
 
       },
+      screens: {
+        'xs': '320px',
+      }
     },
   },
   plugins: [],

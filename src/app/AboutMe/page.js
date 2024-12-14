@@ -20,9 +20,7 @@ function page() {
                 Raina
                 </span>
                 </h1>
-                <p className="leading-relaxed">Am persuing my graduation from U.P collge Varanasi,
-                I have experence in teaching English for ILETS students and am an influcencer on Intagram,
-                I like to explore new cities and make friends, great beliver in Honesty is the best policy and always like to be on time
+                <p className="leading-relaxed"> influencer, dancer, and zoology student from Varanasi, India. With a passion for creating engaging content and promoting brands, I&apos;ve built a community on Instagram and beyond. When I&apos;m not studying or creating, you can find me dancing, exploring new places, or trying out new tech trends.
                 </p>
                 <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-100 mb-5"></div>
                 <Review rate={4} feild={'Dance'}/>
