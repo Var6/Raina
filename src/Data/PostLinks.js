@@ -6,6 +6,7 @@ export  const photosData = [
         "/Photos/2.jpeg",
         "/Photos/DP.png",
       ],
+      caption:"hello world",
     },
     {
       mainPhotoLink: "/Photos/1.jpg",
@@ -14,6 +15,7 @@ export  const photosData = [
         "/Photos/2.jpeg",
         "/Photos/DP.png",
       ],
+      caption:"hello world",
     },
     {
       mainPhotoLink: "/Photos/1.jpg",
@@ -22,6 +24,7 @@ export  const photosData = [
         "/Photos/2.jpeg",
         "/Photos/DP.png",
       ],
+      caption:"hello world",
     },
     {
       mainPhotoLink: "/Photos/1.jpg",
@@ -30,6 +33,7 @@ export  const photosData = [
         "/Photos/2.jpeg",
         "/Photos/DP.png",
       ],
+      caption:"hello world",
     },
     {
       mainPhotoLink: "/Photos/1.jpg",
@@ -38,6 +42,7 @@ export  const photosData = [
         "/Photos/2.jpeg",
         "/Photos/DP.png",
       ],
+      caption:"hello world",
     },
     {
       mainPhotoLink: "/Photos/1.jpg",
@@ -46,6 +51,7 @@ export  const photosData = [
         "/Photos/2.jpeg",
         "/Photos/DP.png",
       ],
+      caption:"hello world",
     },
     {
       mainPhotoLink: "/Photos/1.jpg",
@@ -54,8 +60,8 @@ export  const photosData = [
         "/Photos/2.jpeg",
         "/Photos/DP.png",
       ],
+      caption:"hello",
     },
-   
   ];
 export const reels = [
     {
@@ -83,3 +89,9 @@ export const reels = [
       caption: 'Collaboration with PEESAFE for TOILET SEAT SANITIZER SPRAY & DAILY WEAR PANTY LINERS advertisement',
     },
   ];
+  export const HomePageimage=[
+    {
+      mainPhotoLink: "/Photos/1.jpg",
+    }
+  ];
+  export const AboutMe ='/Photos/1.jpg';

@@ -2,7 +2,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 
-const PhotoViewer = ({ mainPhotoLink, subPhotoLinks }) => {
+const PhotoViewer = ({ mainPhotoLink, subPhotoLinks, caption }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const imageRef = useRef(null);
 
@@ -49,7 +49,7 @@ const PhotoViewer = ({ mainPhotoLink, subPhotoLinks }) => {
   }, []);
 
   return (
-    <div className="relative">
+    <div className="relative p-2 flex-col items-center justify-between ">
       <Image
         src={subPhotoLinks[currentIndex]}
         alt={`Photo ${currentIndex + 1}`}
@@ -57,11 +57,11 @@ const PhotoViewer = ({ mainPhotoLink, subPhotoLinks }) => {
         height={300} // Adjust height as needed
         layout="fixed" 
         objectFit="cover"
-        className="rounded-lg"
+        className="rounded-lg mx-auto"
         ref={imageRef} 
       />
       {subPhotoLinks.length > 1 && (
-        <div className="absolute top-1/2 flex space-x-60">
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 flex space-x-60">
           <button
             onClick={handlePrev}
             className="bg-transparent hover:bg-red-500 rounded-full p-2 shadow-md  hover:shadow-lg"
@@ -76,6 +76,7 @@ const PhotoViewer = ({ mainPhotoLink, subPhotoLinks }) => {
           </button>
         </div>
       )}
+      <div className='text-transparent text-center bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 text-2xl rounded-lg p-3 '> {caption} </div>
     </div>
   );
 };
