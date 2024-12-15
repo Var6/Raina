@@ -1,17 +1,13 @@
 import React from 'react'
-import Photoview from '../components/photoview';
-
+import { photosData } from '@/Data/PostLinks';
+import PhotoViewer from '../components/photoview';
 const page = () => {
-  const photos = [
-    { url: 'https://www.instagram.com/p/DB9BkuLvThI/?img_index=1' },
-    { url: 'https://www.instagram.com/p/DB9BkuLvThI/?img_index=2' },
-    { url: 'https://www.instagram.com/p/DB9BkuLvThI/?img_index=3' },
-  ];
-  
   return (
-    <div>
-      <Photoview photos={photos}/>
-    </div>
+    <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2'>
+    {photosData.map((photo, index) => (
+       <PhotoViewer key={index} mainPhotoLink={photo.mainPhotoLink} subPhotoLinks={photo.subPhotoLinks} />
+    ))}
+  </div>
   )
 }
 
