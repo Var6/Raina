@@ -89,9 +89,3 @@ export const reels = [
       caption: 'Collaboration with PEESAFE for TOILET SEAT SANITIZER SPRAY & DAILY WEAR PANTY LINERS advertisement',
     },
   ];
-  export const HomePageimage=[
-    {
-      mainPhotoLink: "/Photos/1.jpg",
-    }
-  ];
-  export const AboutMe ='/Photos/1.jpg';

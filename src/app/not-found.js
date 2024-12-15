@@ -23,7 +23,7 @@ export default async function NotFound() {
             You&apos;re searching for <span className="text-red-500">{data.domain}</span>? Eeuuu...
           </h2>
           <p className="text-lg mb-8">
-            That page doesn`&apos;t exist, but don`&apos;t worry, we`&apos;ve got you covered!
+            That page doesn&apos;t exist, but don&apos;t worry, we&apos;ve got you covered!
           </p>
           <Link
             href="/"
