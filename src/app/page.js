@@ -7,7 +7,7 @@ import React from "react";
 export default function Home() {
 
     return (
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 bg-black">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 ">
             <div className="grid gap-4 z-50 ">
                 <div>
                     <Image width={200} height={100} className="h-auto max-w-full rounded-lg" src="/Photos/2.jpeg" alt=""/>
