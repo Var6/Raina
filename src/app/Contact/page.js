@@ -5,8 +5,8 @@ import { GoogleGeminiEffect } from '../components/googleEffect'
 import { useScroll, useTransform } from 'framer-motion';
 import Textfixer from '../components/textfixer';
 
-function page() {
-  const ref = useRef(null);
+function Page() {
+  const ref = React.useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"],
@@ -53,4 +53,4 @@ function page() {
   )
 }
 
-export default page
+export default Page
