@@ -1,7 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
-import "@radix-ui/themes/styles.css";
-import { Providers } from "./components/providers";
+import Nav from "./components/nav";
+import Footer from "./components/footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -21,7 +21,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
           <div className="hidden">
@@ -33,10 +33,12 @@ This website is a platform for me to showcase my talents, share my experiences, 
 Feel free to explore my website, watch my videos, and follow me on social media to stay updated on my latest projects and adventures!
 This content highlights Raina&apos;s personality, talents, and passions while also emphasizing her influencer and branding work
         </div>
-        <Providers>
+
+       <Nav/>
         {children}
-        </Providers>
+      <Footer/>
       </body>
+
     </html>
   );
 }

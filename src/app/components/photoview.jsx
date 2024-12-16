@@ -1,6 +1,7 @@
 'use client'
 import React, { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
+import { BackgroundGradient } from './box';
 
 const PhotoViewer = ({ mainPhotoLink, subPhotoLinks, caption }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -49,11 +50,11 @@ const PhotoViewer = ({ mainPhotoLink, subPhotoLinks, caption }) => {
   }, []);
 
   return (
-    <div className="relative p-2 flex-col items-center justify-between ">
+    <BackgroundGradient className={'relative p-2 flex-col items-center justify-between'} animate={true}>
       <Image
         src={subPhotoLinks[currentIndex]}
         alt={`Photo ${currentIndex + 1}`}
-        width={300} // Adjust width as needed
+        width={500} // Adjust width as needed
         height={300} // Adjust height as needed
         layout="fixed" 
         objectFit="cover"
@@ -61,7 +62,7 @@ const PhotoViewer = ({ mainPhotoLink, subPhotoLinks, caption }) => {
         ref={imageRef} 
       />
       {subPhotoLinks.length > 1 && (
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 flex space-x-60">
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 flex space-x-[360px]">
           <button
             onClick={handlePrev}
             className="bg-transparent hover:bg-red-500 rounded-full p-2 shadow-md  hover:shadow-lg"
@@ -77,7 +78,7 @@ const PhotoViewer = ({ mainPhotoLink, subPhotoLinks, caption }) => {
         </div>
       )}
       <div className='text-transparent text-center bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600 text-2xl rounded-lg p-3 '> {caption} </div>
-    </div>
+    </BackgroundGradient>
   );
 };
 

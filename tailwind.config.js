@@ -1,4 +1,4 @@
-const { blackA, violet } = require("@radix-ui/colors");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -10,11 +10,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
-        ...blackA,
-				...violet,
-
+       
       },
       screens: {
         'xs': '320px',

@@ -3,10 +3,12 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import Review from '../components/review'
+import { FlipWords } from '../components/flipwords'
 
 
 
 function page() {
+    const words=['Raina', 'A Dancer','A Influencer','A Student' ]
   return (
             <section className="text-gray-600 body-font overflow-hidden">
         <div className="container px-5 py-24 mx-auto">
@@ -17,7 +19,7 @@ function page() {
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">
                 Hello,I&apos;m
                 <br />
-                Raina
+                <FlipWords words={words} />
                 </span>
                 </h1>
                 <p className="leading-relaxed"> influencer, dancer, and zoology student from Varanasi, India. With a passion for creating engaging content and promoting brands, I&apos;ve built a community on Instagram and beyond. When I&apos;m not studying or creating, you can find me dancing, exploring new places, or trying out new tech trends.
