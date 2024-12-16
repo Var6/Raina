@@ -20,16 +20,12 @@ function Page() {
       'Feel free to connect',
       'Connect me on Instagam',
       'Feel free to connect',
-      'Connect me on Instagam',
+      'Connect me on Snapchat',
       'Feel free to connect',
-      'Connect me on Instagam',
+      'Connect me on Facebook',
       'Feel free to connect',
-      'Connect me on Instagam',
-      'Hello!',
-      'How are you?',
-      'I am good!',
-      'Thanks!',
-      'Welcome!',
+      'Connect me via Email',
+   
     ];
   return (
     <div className="h-[400vh] bg-black w-full dark:border dark:border-white/[0.1] rounded-md relative pt-40 overflow-clip"
@@ -46,9 +42,9 @@ function Page() {
         />   
        {
         messages.map((message,index)=>(
-          <Textfixer key={index} text={message} place={index % 2 !== 0 ? 'text-right' : 'text-left'}/>
+          <Textfixer key={index} text={message} place={index % 2 !== 0 ? 'text-right -px-4 ' : 'text-left'}/>
         ))}
-        <Textfixer text={'hellow'} place={'float-right'} />
+        <Textfixer text={'hellow'} place={'float-right p-3'} />
         </div>  
   )
 }

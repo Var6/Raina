@@ -4,6 +4,7 @@ import Link from 'next/link'
 import React from 'react'
 import Review from '../components/review'
 import { FlipWords } from '../components/flipwords'
+import { Modal, ModalTrigger } from '../components/animatedbutton'
 
 
 
@@ -29,9 +30,20 @@ function page() {
                 <Review rate={3} feild={'Photography'}/>
                 <Review rate={4} feild={'Fitness'}/>
                 <Review rate={2} feild={'Modeling'}/>
-                <div className="flex">
-                <button className="flex ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">Contact</button>
+                <Link href={'./Contact'}>
+                <div className="flex items-center justify-center">
+                <Modal>
+                <ModalTrigger className="bg-blue-700 dark:bg-blue-300 dark:text-black text-white flex justify-center group/modal-btn">
+                <span className="group-hover/modal-btn:translate-x-40 text-center transition duration-500">
+                 Contact
+                </span>
+                <div className="-translate-x-40 group-hover/modal-btn:translate-x-0 flex items-center justify-center absolute inset-0 transition duration-500 text-white z-20">
+                    🔗
                 </div>
+                </ModalTrigger>
+                </Modal>
+                </div>
+                </Link>
             </div>
             </div>
         </div>

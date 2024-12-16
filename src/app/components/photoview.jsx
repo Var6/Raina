@@ -62,7 +62,7 @@ const PhotoViewer = ({ mainPhotoLink, subPhotoLinks, caption }) => {
         ref={imageRef} 
       />
       {subPhotoLinks.length > 1 && (
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 flex space-x-[360px]">
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 flex space-x-[360px] sm:space-x-[150px] ">
           <button
             onClick={handlePrev}
             className="bg-transparent hover:bg-red-500 rounded-full p-2 shadow-md  hover:shadow-lg"

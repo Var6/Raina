@@ -8,7 +8,7 @@ const page = () => {
     <div>
      <div className="flex flex-wrap justify-center gap-4 md:gap-6 lg:gap-8">
       {reels.map((reel, index) => (
-        <div key={index} className="w-full md:w-1/2 lg:w-1/3 xl:w-1/4">
+        <div key={index} className="w-full sm:m-3 md:w-1/2 lg:w-1/3 xl:w-1/4">
           <InstagramEmbed url={reel.url} caption={reel.caption} />
         </div>
       ))}
